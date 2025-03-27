@@ -1,18 +1,16 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import profile from '../../../public/images/profile.png';
 
 export const metadata: Metadata = {
   title: 'Tentang Saya',
   description: 'Halaman tentang saya.',
   openGraph: {
-    title: 'Tentang Saya',
-    description: 'Halaman tentang saya.',
+    images: "/images/profile.png", 
+    url: "https://example.com/about",
   },
 };
 
-export default function About() {
+export default function About({metadata}: any) {
   return (
     <div className="mt-16 px-8 flex flex-col items-center text-center min-h-screen py-10">
       <header className="mb-6">
