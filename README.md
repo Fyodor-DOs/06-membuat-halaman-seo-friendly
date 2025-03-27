@@ -54,3 +54,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ![alt text](public/images/6.png)
 
 ### Tugas
+> Disini saya menggunakan Lighthouse yang tersedia di Chrome DevTools, dikarenakan jika menggunakan Google Search Console memerlukan domain yang diakses secara publik.
+
+![alt text](public/images/7.png)
