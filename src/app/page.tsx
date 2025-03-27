@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Tentang Saya',
-  description: 'Halaman tentang saya.',
   openGraph: {
+    title: 'Tentang Saya',
+    description: 'Halaman tentang saya.',
     images: "/images/profile.png", 
     url: "https://example.com/about",
   },
@@ -14,7 +14,8 @@ export default function About({metadata}: any) {
   return (
     <div className="mt-16 px-8 flex flex-col items-center text-center min-h-screen py-10">
       <header className="mb-6">
-        <h1 className="font-bold text-5xl text-zinc-800">Tentang Saya</h1>
+        <h1 className="font-bold text-5xl text-zinc-800">{metadata.title}</h1>
+        <p className="text-zinc-600">{metadata.description}</p>
       </header>
       <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center mt-6">
         <Image

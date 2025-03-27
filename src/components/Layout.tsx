@@ -7,8 +7,8 @@ type LayoutProps = {
   children: React.ReactNode;
 };
 
-export default function Layout({ children }: any) {
-  const metadata = children.props.metadata || defaultMetadata;
+export default function Layout({ children }: LayoutProps) {
+  const metadata = (children as any)?.props?.metadata || defaultMetadata;
 
   return (
     <>
@@ -20,10 +20,10 @@ export default function Layout({ children }: any) {
         {/* Open Graph Tags */}
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
-        {metadata.openGraph.images.map((image: string, index: number) => (
+        {metadata.openGraph?.images?.map((image: string, index: number) => (
           <meta key={index} property="og:image" content={image} />
         ))}
-        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:url" content={metadata.openGraph?.url} />
       </Head>
 
       <Navbar />
