@@ -14,8 +14,7 @@ export default function About({metadata}: any) {
   return (
     <div className="mt-16 px-8 flex flex-col items-center text-center min-h-screen py-10">
       <header className="mb-6">
-        <h1 className="font-bold text-5xl text-zinc-800">{metadata.title}</h1>
-        <p className="text-zinc-600">{metadata.description}</p>
+        <h1 className="font-bold text-5xl text-zinc-800">Tentang Saya</h1>
       </header>
       <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center mt-6">
         <Image

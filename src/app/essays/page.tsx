@@ -1,21 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Esai | Artikel Teknologi & Rekayasa Perangkat Lunak",
-  description: "Baca berbagai esai menarik tentang IT Governance, Rekayasa Perangkat Lunak, dan pola desain dalam pengembangan perangkat lunak.",
-  openGraph: {
-    url: "https://yourwebsite.com/essays",
-    images: [
-      { url: "/images/article1.png", width: 1200, height: 630, alt: "Artikel 1" },
-      { url: "/images/article2.png", width: 1200, height: 630, alt: "Artikel 2" },
-      { url: "/images/article3.png", width: 1200, height: 630, alt: "Artikel 3" }
-    ]
-  }
-};
 
 export default function Essays() {
+  const metadata = {
+    title: "Esai | Artikel Teknologi & Rekayasa Perangkat Lunak",
+    description: "Baca berbagai esai menarik tentang IT Governance, Rekayasa Perangkat Lunak, dan pola desain dalam pengembangan perangkat lunak.",
+    openGraph: {
+      url: "https://yourwebsite.com/essays",
+      images: ["/images/article1.png", "/images/article2.png", "/images/article3.png"]
+    }
+  };
+
   const articles = [
     {
       title: "Kenapa Pola Desain yang Salah Bisa Merusak Seluruh Proyek Perangkat Lunak?",
